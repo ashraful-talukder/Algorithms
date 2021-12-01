@@ -1,5 +1,6 @@
 #include<stdio.h>
 
+
 int Quicksort(int A[],int p, int r)
 {
     int q;
@@ -10,6 +11,7 @@ int Quicksort(int A[],int p, int r)
         Quicksort(A,q+1,r);
     }
 }
+
 
 int partition(int A[],int p, int r)
 {
@@ -31,6 +33,7 @@ int partition(int A[],int p, int r)
     A[r]=temp;
     return i+1;
 }
+
 
 int main()
 {
