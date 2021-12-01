@@ -1,27 +1,42 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main()
+int search(int arr[], int n, int x) 
+
 {
-    int n,i,s=0,a;
-    printf("Enter the size of the array: ");
-    scanf("%d",&n);
-    int A[n];
-    printf("Enter the array values:\n");
-    for(i=0 ; i<n ; i++)
-    {
-        scanf("%d",&A[i]);
-    }
-    printf("Enter the value that you're searching: ");
-    scanf("%d",&a);
-    for(i=0 ; i<n ; i++)
-    {
-        if(A[i]==a)
-        {
-            printf("Found\nPosition: %d\n",s+1);
-            return 0;
-        }
-        ++s;
-    }
-    printf("Your searching value is not in the array\n");
-    return 0;
+
+    int i; 
+
+    for (i = 0; i < n; i++) 
+
+        if (arr[i] == x) 
+            return i; 
+
+    return -1; 
+
 }
+
+
+int main(void) {
+
+    int arr[] = { 2, 3, 4, 10, 40 }; 
+
+    int x = 10; 
+
+    int n = sizeof(arr) / sizeof(arr[0]); 
+
+   
+
+    // Function call 
+
+    int result = search(arr, n, x); 
+
+    (result == -1) 
+
+        ? printf("Element is not present in array") 
+
+        : printf("Element is present at index %d", result); 
+
+    return 0; 
+
+}
+
